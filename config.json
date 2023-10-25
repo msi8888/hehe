@@ -394,6 +394,7 @@
       "outboundTag": "WARP-socks5-v4",
       "domain": [
         "geosite:netflix",
+        "geosite:openai",
         "domain:astro.com.my",
         "domain:api.ott-nav.com",
         "domain:linearjitp-playback.astro.com.my",
