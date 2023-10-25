@@ -400,16 +400,7 @@
         "domain:d1fk7kbmz4il3.cloudfront.net",
         "domain:app.ott-nav.com",
         "domain:d3j4fjrwclc3o8.cloudfront.net",
-        "domain:in.appcenter.ms",
-        "ip.gs"
-      ]
-    },
-    {
-      "type": "field",
-      "outboundTag": "WARP-socks5-v6",
-      "domain": [
-      "geosite:google",
-      "p3terx.com"
+        "domain:d277c08tzca9og.cloudfront.net"
       ]
     },
       {
