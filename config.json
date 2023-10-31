@@ -393,17 +393,9 @@
       "type": "field",
       "outboundTag": "WARP-socks5-v4",
       "domain": [
-#add-domain
-        "geosite:netflix",
-        "geosite:openai",
-        "domain:astro.com.my",
-        "domain:api.ott-nav.com",
-        "domain:linearjitp-playback.astro.com.my",
-        "domain:d1fk7kbmz4il3.cloudfront.net",
-        "domain:app.ott-nav.com",
-        "domain:d3j4fjrwclc3o8.cloudfront.net",
-        "domain:d277c08tzca9og.cloudfront.net"
-      ]
+#add-domain      
+        "domain:example.com"
+    ] 
     },
       {
         "inboundTag": [
