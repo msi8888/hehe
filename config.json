@@ -383,7 +383,7 @@
     },
     {
       "type": "field",
-      "outboundTag": "Reject",
+      "outboundTag": "blocked",
       "domain": [
         "geosite:category-ads-all",
         "geosite:category-porn"
