@@ -413,7 +413,7 @@
       "type": "field",
       "outboundTag": "WARP-socks5-v4",
       "domain": [
-#add-domainv4      
+#add-domain     
         "domain:example.com"
     ] 
     },
@@ -421,7 +421,7 @@
     "type":"field",
     "outboundTag":"WARP-socks5-v6",
     "domain":[
-#add-domainv6      
+#add-domain     
         "domain:example.com"
       ]
      },   
