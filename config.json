@@ -85,6 +85,37 @@
     },
     {
       "listen": "127.0.0.1",
+      "port": "10007",
+      "protocol": "vless",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "id": "286a4638-428e-41c7-9e2a-32ee25e8890a"
+#xvless
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "xhttp",
+        "xhttpSettings": {
+          "path": "/xvless",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "sniffing": {
+      "enabled": true,
+      "destOverride": [
+      "http",
+       "tls"
+       ]
+      }
+    },     
+    {
+      "listen": "127.0.0.1",
       "port": "10003",
       "protocol": "trojan",
       "settings": {
