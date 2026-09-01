@@ -1,5 +1,5 @@
 {
-  "log" : {
+  "log": {
     "access": "/var/log/xray/access.log",
     "error": "/var/log/xray/error.log",
     "loglevel": "warning"
@@ -11,12 +11,12 @@
       "protocol": "dokodemo-door",
       "settings": {
         "address": "127.0.0.1"
-        },
+      },
       "tag": "api"
     },
     {
       "listen": "127.0.0.1",
-      "port": "10001",
+      "port": 10001,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -39,16 +39,19 @@
       },
       "sniffing": {
         "enabled": false,
-        "destOverride": ["http", "tls"],
+        "destOverride": [
+          "http",
+          "tls"
+        ],
         "metadataOnly": false
       }
     },
     {
       "listen": "127.0.0.1",
-      "port": "10002",
+      "port": 10002,
       "protocol": "vless",
       "settings": {
-        "decryption":"none",
+        "decryption": "none",
         "clients": [
           {
             "id": "286a4638-428e-41c7-9e2a-32ee25e8890a"
@@ -67,15 +70,18 @@
       },
       "sniffing": {
         "enabled": false,
-        "destOverride": ["http", "tls"]
+        "destOverride": [
+          "http",
+          "tls"
+        ]
       }
     },
     {
       "listen": "127.0.0.1",
-      "port": "10007",
+      "port": 10007,
       "protocol": "vless",
       "settings": {
-        "decryption":"none",
+        "decryption": "none",
         "clients": [
           {
             "id": "286a4638-428e-41c7-9e2a-32ee25e8890a"
@@ -94,9 +100,10 @@
       },
       "sniffing": {
         "enabled": false,
-        "destOverride": ["http", "tls"]
-          ]
-        }
+        "destOverride": [
+          "http",
+          "tls"
+        ]
       }
     }
   ],
@@ -111,38 +118,38 @@
       "tag": "blocked"
     },
     {
-            "tag":"warp",
-            "protocol":"socks",
-            "settings":{
-                "servers":[
-                    {
-                        "address":"127.0.0.1",
-                        "port":40000
-                    }
-                ]
-            }
-        },
-        {
-            "tag":"WARP-socks5-v4",
-            "protocol":"freedom",
-            "settings":{
-                "domainStrategy":"UseIPv4"
-            },
-            "proxySettings":{
-                "tag":"warp"
-            }
-        },
-        {
-            "tag":"WARP-socks5-v6",
-            "protocol":"freedom",
-            "settings":{
-                "domainStrategy":"UseIPv6"
-            },
-            "proxySettings":{
-                "tag":"warp"
-            }
-        }
-    ],
+      "tag": "warp",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 40000
+          }
+        ]
+      }
+    },
+    {
+      "tag": "WARP-socks5-v4",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv4"
+      },
+      "proxySettings": {
+        "tag": "warp"
+      }
+    },
+    {
+      "tag": "WARP-socks5-v6",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv6"
+      },
+      "proxySettings": {
+        "tag": "warp"
+      }
+    }
+  ],
   "routing": {
     "rules": [
       {
@@ -164,30 +171,30 @@
           "fc00::/7",
           "fe80::/10"
         ]
-    },
-    {
-      "type": "field",
-      "outboundTag": "blocked",
-      "domain": [
-        "domain:contoh.com"
-      ]
-    },
-    {
-      "type": "field",
-      "outboundTag": "WARP-socks5-v4",
-      "domain": [
-#add-domain     
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "domain": [
+          "domain:contoh.com"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "WARP-socks5-v4",
+        "domain": [
+#add-domain
         "domain:example.com"
-    ] 
-    },
-    {
-    "type":"field",
-    "outboundTag":"WARP-socks5-v6",
-    "domain":[
-#add-domain     
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "WARP-socks5-v6",
+        "domain": [
+#add-domain
         "domain:example.com"
-      ]
-     },   
+        ]
+      },
       {
         "inboundTag": [
           "api"
@@ -221,8 +228,8 @@
     "system": {
       "statsInboundUplink": true,
       "statsInboundDownlink": true,
-      "statsOutboundUplink" : true,
-      "statsOutboundDownlink" : true
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
     }
   }
 }
