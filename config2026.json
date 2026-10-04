@@ -49,6 +49,7 @@
     {
       "listen": "127.0.0.1",
       "port": 10002,
+      "tag": "vless-ws",
       "protocol": "vless",
       "settings": {
         "decryption": "none",
@@ -79,6 +80,7 @@
     {
       "listen": "127.0.0.1",
       "port": 10007,
+      "tag": "vless-xhttp",
       "protocol": "vless",
       "settings": {
         "decryption": "none",
@@ -214,6 +216,8 @@
   "stats": {},
   "api": {
     "services": [
+      "HandlerService",
+      "ReflectionService",
       "StatsService"
     ],
     "tag": "api"
