@@ -107,7 +107,8 @@
           "tls", "quic"
         ]
       }
-    }
+    },
+    {
        "listen": "127.0.0.1",
       "port": 10008,
       "tag": "vless-httpupgrade",
