@@ -108,6 +108,36 @@
         ]
       }
     }
+       "listen": "127.0.0.1",
+      "port": 10008,
+      "tag": "vless-httpupgrade",
+      "protocol": "vless",
+      "settings": {
+        "decryption": "none",
+        "clients": [
+          {
+            "id": "286a4638-428e-41c7-9e2a-32ee25e8890a"
+#hupgrade
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "httpupgrade",
+        "httpupgradeSettings": {
+          "path": "/hupgrade"
+        },
+        "sockopt": {
+          "tcpFastOpen": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls", "quic"
+        ]
+      }
+    }       
   ],
   "outbounds": [
     {
